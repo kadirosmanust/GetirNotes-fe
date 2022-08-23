@@ -1,6 +1,6 @@
 export const CONFIG_PROD = {
   URL: {
-    BACKEND_URL: 'https://getirnotesbackend.herokuapp.com/'
+    BACKEND_URL: 'https://getirnotesbackend.herokuapp.com/api/'
   },
   ENDPOINTS: {
     NOTES: 'notes'
