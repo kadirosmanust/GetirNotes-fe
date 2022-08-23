@@ -1,0 +1,195 @@
+.darkBackground {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  padding: 20px;
+  width: 600px;
+  height: 500px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    flex-grow: 1;
+  }
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.textEditorContainer {
+  flex-grow: 1;
+
+  p {
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  h1 {
+    font-size: 24px;
+    color: rgb(5, 5, 5);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+  h2 {
+    font-size: 15px;
+    color: rgb(101, 103, 107);
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
+  li {
+    margin: 8px 32px 8px 32px;
+  }
+  code {
+    background-color: rgb(240, 242, 245);
+    font-family: Menlo, Consolas, Monaco, monospace;
+    display: block;
+    padding: 8px 8px 8px 52px;
+    line-height: 1.53;
+    font-size: 13px;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    tab-size: 2;
+    /* white-space: pre; */
+    overflow-x: auto;
+    position: relative;
+  }
+}
+
+.button {
+  user-select: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1px solid transparent;
+  font-weight: 600;
+  background-color: #4082ce;
+  border-radius: 4px;
+  height: 40px;
+  padding: 4px 12px;
+  transition: all 200ms ease-in-out;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: #131318;
+    border: 1px solid #131318;
+  }
+  &:disabled {
+    background-color: #ccc;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  color: red;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.deleteButton {
+  background-color: #fe4a49;
+  color: #fff;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #131318;
+    border: 1px solid #131318;
+  }
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(55, 53, 47);
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
+  cursor: text;
+  p {
+    margin: 0;
+  }
+  div:focus-visible {
+    outline: none;
+  }
+}
+.conditionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectContainer {
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+  border-radius: 6px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #cbcbcb;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::part(button) {
+    background-color: #f00;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  &::part(listbox) {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+  }
+}

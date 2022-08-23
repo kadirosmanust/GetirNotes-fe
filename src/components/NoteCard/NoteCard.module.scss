@@ -1,0 +1,124 @@
+.container {
+  width: 280px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 300px;
+  flex-shrink: 0;
+  gap: 20px;
+  border-radius: 8px;
+
+  @media screen and (min-width: 1024px) {
+    width: 20%;
+    flex-grow: 1;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.noteDetail {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-items: flex-start;
+  position: relative;
+  user-select: none;
+  cursor: default;
+
+  &:hover {
+    .button {
+      opacity: 1;
+    }
+  }
+}
+
+.number {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9a9a97;
+}
+
+.toDoBadge {
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: green;
+  font-weight: 600;
+  color: #00000098;
+  user-select: none;
+  cursor: default;
+  background-color: rgb(255, 226, 221);
+}
+
+.yellowBadge {
+  background-color: black;
+}
+
+.button {
+  background-color: transparent;
+  color: #9a9a97;
+  opacity: 0;
+
+  position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 4px 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background-color: #9a9a9740;
+  }
+  svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+    fill: rgba(55, 53, 47, 0.5);
+    flex-shrink: 0;
+    backface-visibility: hidden;
+  }
+  @media screen and (max-width: 1024px) {
+    opacity: 1;
+  }
+}
+
+.newButton {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: rgba(55, 53, 47, 0.5);
+  padding-left: 6px;
+
+  &:hover {
+    background-color: rgba(55, 53, 47, 0.08);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+    fill: rgba(55, 53, 47, 0.5);
+    flex-shrink: 0;
+    backface-visibility: hidden;
+    margin-right: 6px;
+  }
+}

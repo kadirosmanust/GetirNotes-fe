@@ -1,0 +1,96 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1440px;
+}
+
+.topContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.addButton {
+  user-select: none;
+  cursor: pointer;
+  background-color: #131318;
+  color: #fff;
+  border: none;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1.2em;
+  font-weight: 700;
+  color: rgb(55, 53, 47);
+}
+
+.title {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.todo {
+  background-color: #fcf6bd;
+}
+
+.inProgress {
+  background-color: #d0f4de;
+}
+.completed {
+  background-color: #e4c1f9;
+}
+.noStatus {
+  background-color: #a9def9;
+}
+
+.loading {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+  color: #9a9a9b;
+}
+
+.button {
+  margin-right: 10px;
+  user-select: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 6px 16px;
+  transition: all 200ms ease-in-out;
+  background-color: #ffd6a5;
+  font-weight: 600;
+  color: #131318;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #131318;
+  }
+}
