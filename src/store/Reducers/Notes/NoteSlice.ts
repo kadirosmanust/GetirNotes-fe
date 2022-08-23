@@ -24,7 +24,7 @@ export const fetchNotes: any = createAsyncThunk('notes/fetchNotes', async () => 
 export const createNote: any = createAsyncThunk(
   'notes/createNote',
   async (note: CreateNote, thunkAPI) => {
-    const response = (await httpPost(`CONFIG.ENDPOINTS.NOTES`, note)) as AxiosResponse;
+    const response = (await httpPost(`${CONFIG.ENDPOINTS.NOTES}`, note)) as AxiosResponse;
 
     const payload = { status: response.status, note: response.data };
     return payload;
